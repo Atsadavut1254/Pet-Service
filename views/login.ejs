@@ -1,0 +1,83 @@
+<% include partials/head %>
+<body id="bg-login" >
+<!-- WRAPPER START -->
+
+<div
+
+        class="padding25">
+    <div  align="center" style="padding: 100px;">
+        <div style="white-space: nowrap; text-align: center;top: 5%;"><span
+                    style="color: #ffb900;display: inline-block;font-size: 18px;"></span>
+        </div>
+    </div>
+    <div
+            style="max-width:400px;min-width: 250px;height:auto;margin:0 auto;padding:20px;position:relative;top:0%;background-color:rgba(0,0,0,0.5);border-radius:10px">
+
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <h2 style="color:white">Perfect Pets</h2>
+            </div>
+        </div>
+
+        <hr>
+
+        <div id="UpdatePanel1">
+            <form class="form-horizontal" action="/login" method="post" id="form_login" name="form_login">
+                <input type="hidden" name="__cmd" id="__cmd" value="login">
+                <h3 style="color:white;margin-bottom:10px">Login</h3>
+
+                <div class="input-group" style="margin-bottom:20px;">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input name="username" type="text" maxlength="255" id="username" autofocus
+                           class=" form-control input-sm " placeholder="User Name" required>
+                </div>
+
+                <div class="input-group" style="margin-bottom:20px;">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input name="password" type="password" maxlength="20" id="password"
+                           class=" form-control input-sm " placeholder="Password" required>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <a class="btn btn-default pull-left" href="service">Back</a>
+                    </div>
+
+                    <div class="col-md-6">
+                        <button class="btn btn-info pull-right" type="submit">Login</button>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- WRAPPER END -->
+
+<!-- MAIN JS FILES REQUIRED ON ALL PAGES -->
+<script src="/vendor/jquery/jquery.min.js"></script>
+
+<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="/vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+<script src="/vendor/wow/wow.min.js"></script>
+<script src="/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/vendor/SmoothScroll/SmoothScroll.min.js"></script>
+
+<script src="/vendor/waypoints/waypoints.min.js"></script>
+<script src="/vendor/counterup/jquery.counterup.min.js"></script>
+
+
+<!-- HERO SLIDER-->
+<script src="/vendor/hero-slider/js/modernizr.js"></script>
+<script src="/vendor/hero-slider/js/main.js"></script>
+
+<!-- OWL CAROUSEL -->
+<script src="/vendor/owl-carousel/owl.carousel.js"></script>
+
+<!-- FILTERIZR -->
+<script src="/vendor/jquery/jquery.filterizr.js"></script>
+
+<!-- EDURA JS REQUIRED ON ALL PAGES-->
+<script src="/javascripts/script.js"></script>
+
+</body>

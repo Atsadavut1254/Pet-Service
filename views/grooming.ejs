@@ -1,0 +1,491 @@
+<% include partials/head %>
+<body>
+<div id="wrapper">
+    <% include partials/navbar %>
+
+    <!-- PAGE TITLE START -->
+    <section id="title" class="container-fluid wow fadeInDown">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <h1>Grooming</h1>
+                </div>
+                <div class="col-xs-6 text-right breadcrumbs">
+                    <ul class="list-inline list-unstyled">
+                        <li><a href="service">Home</a></li>
+                        <li>/</li>
+                        <li>Grooming</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PAGE TITLE END -->
+
+    <section id="home-content">
+        <!-- CONTENT START -->
+        <div class="col-2 ">
+            <div class="container">
+
+            </div>
+        </div>
+        <div class="container paddind15">
+            <div class="row ">
+                <form class="form-group" method="post" id="form_data" name="form_data">
+
+                    <input type="hidden" name="__cmd" id="__cmd" value="">
+                    <input type="hidden" name="__package_id" id="__package_id" value="">
+                    <input type="hidden" name="__open_shop_time" id="__open_shop_time" value="09:30">
+                    <input type="hidden" name="__close_shop_time" id="__close_shop_time" value="20:00">
+                    <input type="hidden" name="__package_id" id="__package_id" value="">
+                    <input type="hidden" name="__grooming_wash_id" id="__grooming_wash_id" class="form-control"
+                           value="">
+                    <input type="hidden" name="__grooming_wash_group_id" id="__grooming_wash_group_id"
+                           class="form-control"
+                           value="">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <div id="smartwizard">
+                                <ul class="nav nav-tabs step-anchor">
+                                    <li class="nav-item active"><a href="#step-1" class="nav-link">ขั้นตอนที่ 1<br>
+                                            <small>รายละเอียดการจอง</small>
+                                        </a></li>
+                                    <li class="nav-item"><a href="#step-2" class="nav-link">ขั้นตอนที่ 2<br>
+                                            <small>เลือกสุนัขและบริการ</small>
+                                        </a></li>
+                                    <li class="nav-item"><a href="#step-3" class="nav-link">ขั้นตอนที่ 3<br>
+                                            <small>ยืนยันการจอง</small>
+                                        </a></li>
+                                </ul>
+
+                                <div class="sw-container tab-content" style="min-height: 317px;">
+                                    <div id="step-1" class="tab-pane step-content" style="display: block;">
+                                        <h2>รายละเอียดการจอง</h2>
+                                        <div id="form-step-0" role="form" data-toggle="validator">
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div align="left">
+                                                        <label class="col-sm-3 control-label">
+                                                            ชื่อการจอง :
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <input type="text" name="__grooming_wash_name"
+                                                               id="__grooming_wash_name" class="form-control" onblur=""
+                                                               placeholder="ชื่อการจอง" value="" required=""><br>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <i class="fa fa-asterisk text-red"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div align="left">
+                                                        <label class="col-sm-3 control-label">
+                                                            วันที่จอง :
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <input type="text" name="__grooming_wash_start_date"
+                                                               id="__grooming_wash_start_date" class="form-control"
+                                                               value="2019-05-29" placeholder="วันที่จอง" readonly=""
+                                                               required="">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <i class="fa fa-asterisk text-red"></i>
+                                                        <label class="form-control-static text-red">จองล่วงหน้าอย่างน้อย
+                                                            2
+                                                            วัน</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div align="left">
+                                                        <label class="col-sm-3 control-label">
+                                                            รายละเอียดการจอง :
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-sm-7">
+                                                <textarea name="__grooming_wash_remark" id="__grooming_wash_remark"
+                                                          class="form-control" onblur="" rows="6"
+                                                          placeholder="รายละเอียดการจอง"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="roe">
+                                                <div class="form-group">
+                                                    <div align="left">
+                                                        <label class="col-sm-3 control-label">
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-sm-9">
+                                                        <label class="text-red">หมายเหตุ
+                                                            เมื่อทำการจองคุณลูกค้าต้องเข้ามาถึงก่อนเวลาบริการ 30
+                                                            นาที</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="step-2" class="tab-pane step-content">
+                                        <h2>เลือกสุนัขและบริการ</h2>
+                                        <div id="form-step-1" role="form" data-toggle="validator">
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div align="left">
+                                                        <label class="col-sm-3 control-label">
+                                                            เลือกสุนัข :
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <div class="form-group">
+                                                            <input type="text" name="__dog_id"
+                                                                   id="__dog_id" class="form-control" onblur=""
+                                                                   placeholder="ชื่อสุนัข" value="" required="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <i class="fa fa-asterisk text-red"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div align="left">
+                                                        <label class="col-sm-3 control-label">
+                                                            ช่วงเวลา :
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-sm-1">
+                                                        <select name="__select_hour" id="__select_hour"
+                                                                class="form-control">
+                                                            <option value="09">09</option>
+                                                            <option value="10">10</option>
+                                                            <option value="11">11</option>
+                                                            <option value="12">12</option>
+                                                            <option value="13">13</option>
+                                                            <option value="14">14</option>
+                                                            <option value="15">15</option>
+                                                            <option value="16">16</option>
+                                                            <option value="17">17</option>
+                                                            <option value="18">18</option>
+                                                            <option value="19">19</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-sm-1">
+                                                        <select name="__select_minute" id="__select_minute"
+                                                                class="form-control">
+                                                            <option value="00">00</option>
+                                                            <option value="01">01</option>
+                                                            <option value="02">02</option>
+                                                            <option value="03">03</option>
+                                                            <option value="04">04</option>
+                                                            <option value="05">05</option>
+                                                            <option value="06">06</option>
+                                                            <option value="07">07</option>
+                                                            <option value="08">08</option>
+                                                            <option value="09">09</option>
+                                                            <option value="10">10</option>
+                                                            <option value="11">11</option>
+                                                            <option value="12">12</option>
+                                                            <option value="13">13</option>
+                                                            <option value="14">14</option>
+                                                            <option value="15">15</option>
+                                                            <option value="16">16</option>
+                                                            <option value="17">17</option>
+                                                            <option value="18">18</option>
+                                                            <option value="19">19</option>
+                                                            <option value="20">20</option>
+                                                            <option value="21">21</option>
+                                                            <option value="22">22</option>
+                                                            <option value="23">23</option>
+                                                            <option value="24">24</option>
+                                                            <option value="25">25</option>
+                                                            <option value="26">26</option>
+                                                            <option value="27">27</option>
+                                                            <option value="28">28</option>
+                                                            <option value="29">29</option>
+                                                            <option selected="" value="30">30</option>
+                                                            <option value="31">31</option>
+                                                            <option value="32">32</option>
+                                                            <option value="33">33</option>
+                                                            <option value="34">34</option>
+                                                            <option value="35">35</option>
+                                                            <option value="36">36</option>
+                                                            <option value="37">37</option>
+                                                            <option value="38">38</option>
+                                                            <option value="39">39</option>
+                                                            <option value="40">40</option>
+                                                            <option value="41">41</option>
+                                                            <option value="42">42</option>
+                                                            <option value="43">43</option>
+                                                            <option value="44">44</option>
+                                                            <option value="45">45</option>
+                                                            <option value="46">46</option>
+                                                            <option value="47">47</option>
+                                                            <option value="48">48</option>
+                                                            <option value="49">49</option>
+                                                            <option value="50">50</option>
+                                                            <option value="51">51</option>
+                                                            <option value="52">52</option>
+                                                            <option value="53">53</option>
+                                                            <option value="54">54</option>
+                                                            <option value="55">55</option>
+                                                            <option value="56">56</option>
+                                                            <option value="57">57</option>
+                                                            <option value="58">58</option>
+                                                            <option value="59">59</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="text-red">ร้านเปิดให้บริการเวลา 09:30- 20:00
+                                                            น.</label>
+                                                        <i class="fa fa-asterisk text-red"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div align="left">
+                                                        <label class="col-sm-3 control-label">
+                                                            แพกเกจ :
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-sm-9">
+                                                        <div style="overflow-x: auto">
+                                                            <table class="table table-hover tbgray" id="tbView">
+                                                                <tbody>
+                                                                <tr>
+                                                                    <th width="5%" class=" text-center">เลือก</th>
+                                                                    <th width="35%" class=" text-center">ชื่อแพกเกจ</th>
+                                                                    <th width="15%" class=" text-center">ราคา</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class=" text-center">
+                                                                        <div class="icheckbox_minimal-blue"
+                                                                             aria-checked="false" aria-disabled="false"
+                                                                             style="position: relative;"><input
+                                                                                    type="checkbox" data-duration="180"
+                                                                                    class="minimal check-save-1"
+                                                                                    name="check_run_no[]" value="10"
+                                                                                    style="position: absolute;">
+                                                                            <ins class="iCheck-helper"
+                                                                                 style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class=" text-center">อาบน้ำ</td>
+                                                                    <td class=" text-center  td-price">550.00</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class=" text-center">
+                                                                        <div class="icheckbox_minimal-blue"
+                                                                             aria-checked="false" aria-disabled="false"
+                                                                             style="position: relative;"><input
+                                                                                    type="checkbox" data-duration="180"
+                                                                                    class="minimal check-save-1"
+                                                                                    name="check_run_no[]" value="11"
+                                                                                    style="position: absolute; ">
+                                                                            <ins class="iCheck-helper"
+                                                                                 style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class=" text-center">ตัดแต่งขน</td>
+                                                                    <td class=" text-center  td-price">700.00</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class=" text-center">
+                                                                        <div class="icheckbox_minimal-blue"
+                                                                             aria-checked="false" aria-disabled="false"
+                                                                             style="position: relative;"><input
+                                                                                    type="checkbox" data-duration="30"
+                                                                                    class="minimal check-save-0"
+                                                                                    name="check_run_no[]" value="12"
+                                                                                    style="position: absolute; ">
+                                                                            <ins class="iCheck-helper"
+                                                                                 style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class=" text-center">ตัดเล็บ</td>
+                                                                    <td class=" text-center td-price">50.00</td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div align="left">
+                                                        <label class="col-sm-3 control-label">
+                                                            เวลาในการดำเนินการ (นาที) :
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <input type="text" name="__process_time" id="__process_time"
+                                                               class="form-control" value="0"
+                                                               placeholder="เวลาในการดำเนินการ (นาที)" readonly=""><br>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div align="left">
+                                                        <label class="col-sm-3 control-label">
+                                                            ยอดเงินรวม :
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <input type="text" name="__total_price" id="__total_price"
+                                                               class="form-control" placeholder="ยอดเงินรวม"
+                                                               value="0.00"
+                                                               readonly=""><br>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="step-3" class="tab-pane step-content">
+                                        <h2>ยืนยันการจอง</h2>
+                                        <div id="form-step-2" role="form" data-toggle="validator">
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div class="col-sm-12">
+                                                        <div style="overflow-x: auto">
+                                                            <table class="table table-hover tbgray" id="tbReserve">
+                                                                <tbody>
+                                                                <tr>
+                                                                    <th width="5%">ลำดับ</th>
+                                                                    <th width="25%">ชื่อสุนัข</th>
+                                                                    <th width="25%">ช่วงเวลาที่จอง</th>
+                                                                    <th width="15%">ราคา</th>
+                                                                    <th width="10%"></th>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+                <!-- cart contents end -->
+            </div>
+        </div>
+    </section>
+    <div id="intro" class="container-fluid bg-white padding45">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 text-left">
+                </div>
+
+                <div class="col-md-2 text-center">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTENT END -->
+    <% include partials/footer %>
+</div>
+
+
+<!-- MAIN JS FILES REQUIRED ON ALL PAGES -->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!-- Include jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include jQuery Validator plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+
+
+<!-- Include SmartWizard JavaScript source -->
+<script type="text/javascript" src="/smartwizard/js/jquery.smartWizard.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        // Toolbar extra buttons
+        var btnFinish = $('<button></button>').text('Finish')
+            .addClass('btn btn-info')
+            .on('click', function () {
+                if (!$(this).hasClass('disabled')) {
+                    var elmForm = $("#myForm");
+                    if (elmForm) {
+                        elmForm.validator('validate');
+                        var elmErr = elmForm.find('.has-error');
+                        if (elmErr && elmErr.length > 0) {
+                            alert('Oops we still have error in the form');
+                            return false;
+                        } else {
+                            alert('Great! we are ready to submit form');
+                            elmForm.submit();
+                            return false;
+                        }
+                    }
+                }
+            });
+        var btnCancel = $('<button></button>').text('Cancel')
+            .addClass('btn btn-danger')
+            .on('click', function () {
+                $('#smartwizard').smartWizard("reset");
+                $('#myForm').find("input, textarea").val("");
+            });
+
+
+        // Smart Wizard
+        $('#smartwizard').smartWizard({
+            selected: 0,
+            theme: 'dots',
+            transitionEffect: 'fade',
+            toolbarSettings: {
+                toolbarPosition: 'bottom',
+                toolbarExtraButtons: [btnFinish, btnCancel]
+            },
+            anchorSettings: {
+                markDoneStep: true, // add done css
+                markAllPreviousStepsAsDone: true, // When a step selected by url hash, all previous steps are marked done
+                removeDoneStepOnNavigateBack: true, // While navigate back done step after active step will be cleared
+                enableAnchorOnDoneStep: true // Enable/Disable the done steps navigation
+            }
+        });
+
+        $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDirection) {
+            var elmForm = $("#form-step-" + stepNumber);
+            // stepDirection === 'forward' :- this condition allows to do the form validation
+            // only on forward navigation, that makes easy navigation on backwards still do the validation when going next
+            if (stepDirection === 'forward' && elmForm) {
+                elmForm.validator('validate');
+                var elmErr = elmForm.children('.has-error');
+                if (elmErr && elmErr.length > 0) {
+                    // Form validation failed
+                    return false;
+                }
+            }
+            return true;
+        });
+
+        $("#smartwizard").on("showStep", function (e, anchorObject, stepNumber, stepDirection) {
+            // Enable finish button only on last step
+            if (stepNumber == 3) {
+                $('.btn-finish').removeClass('disabled');
+            } else {
+                $('.btn-finish').addClass('disabled');
+            }
+        });
+
+    });
+</script>
+</body>
+</html>
