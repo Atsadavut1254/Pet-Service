@@ -1,95 +1,54 @@
-let createError = require('http-errors'),
-    express = require('express'),
-    path = require('path'),
-    cookieParser = require('cookie-parser'),
-    logger = require('morgan'),
-    bodyParser = require("body-parser"),
-    mongoose = require("mongoose"),
-    passport = require("passport"),
-    // User                    = require("./models/user"),
-    LocalStrategy = require("passport-local"),
-    passportLocalMongoose = require("passport-local-mongoose");
+const express = require('express');
+const BodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const passport = require('passport');
+// const LocalStrategy = require('passport-local');
+// const passportLocalMongoose = require('passport-local-mongoose');
+const path = require('path');
+const portNumber = process.env.PORT || 9000;
+// const connectString = 'mongodb+srv://stn:' + encodeURIComponent('stn1998') + '@cluster0-mb8sl.mongodb.net/findmyhouse?retryWrites=true';
+// mongoose.connect(connectString);
+const mongoURI = 'mongodb://localhost/FindMyHouse2';
+mongoose.connect(mongoURI);
 
-const port = process.env.PORT || 5000;
-
-
-var indexRouter = require('./routes/index');
-var userRouter = require('./routes/user');
-var registerRouter = require('./routes/register');
-var serviceRouter = require('./routes/service');
-var loginRouter = require('./routes/login');
-var hotelRouter = require('./routes/hotel');
-var groomingRouter = require('./routes/grooming');
-var adminRouter = require('./routes/admin');
-var usescchemaRouter = require('./routes/useschema');
-var uploadRouter = require('./routes/upload');
-var authenticattionRouter = require('./routes/authentication');
-var imgRouter = require('./routes/img');
-
-
-var app = express();
-
-// view engine setup
-app.use(bodyParser.urlencoded({extended: true}));
-app.set('views', path.join(__dirname, 'views'));
+const app = express();
 app.set('view engine', 'ejs');
-
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/', indexRouter);
-app.use('/user', userRouter);
-app.use('/register', registerRouter);
-// app.use('/service', serviceRouter);
-// app.use('/login', loginRouter);
-app.use('/hotel', hotelRouter);
-app.use('/grooming', groomingRouter);
-app.use('/admin', adminRouter);
-app.use('/image', imgRouter);
-
-
-// //mongoose
-mongoose.connect("mongodb+srv://stn:stn1998@cluster0-mb8sl.mongodb.net/findmyhouse?retryWrites=true");
-
+app.use(BodyParser.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
 app.use(require('express-session')({
     secret: 'Find My House',
     resave: false,
     saveUninitialized: false
 }));
+
 app.use(passport.initialize());
 app.use(passport.session());
 
-passport.use(new LocalStrategy(usescchemaRouter.authenticate()));
-passport.serializeUser(usescchemaRouter.serializeUser());
-passport.deserializeUser(usescchemaRouter.deserializeUser());
+let User = require('./models/userSchema');
+let uploadpic = require('./models/upload');
+let authentication = require('./models/authentication_module');
+let user_route = require('./models/user_route');
 
 
-app.get('/service', function (req, res, path) {
-    console.log(req.session);
-    if (authenticattionRouter.checkLogIn(req, res)) {
-        // console.log(req.session);
-        usescchemaRouter.findOne({username: req.session.passport.user}, (err, data) => {
-            if (err) {
-                console.log(err);
-            } else {
-                console.log(data);
-                res.render('service', {userdata: data});
-            }
-        })
-    } else {
-        res.render('service', {userdata: null});
-    }
+app.use('/user',user_route);
 
 
+app.get('/', (req, res) => {
+    res.render('index');
 });
 
-//register
-app.post('/register', uploadRouter.upload.single("pic"), function (req, res) {
-    let imgfile = uploadRouter.uploadIMG(req, res);
+
+app.get('/service', (req, res) => {
+    res.render('service');
+});
+
+app.get('/register', (re, res) => {
+    res.render('register');
+});
+
+app.post('/register', uploadpic.upload.single("pic"), function (req, res) {
+    let imgfile = uploadpic.uploadIMG(req, res);
     let userData = {
         username: req.body.username,
         name: req.body.name,
@@ -107,7 +66,7 @@ app.post('/register', uploadRouter.upload.single("pic"), function (req, res) {
         status: req.body.status
 
     };
-    usescchemaRouter.register(new usescchemaRouter(userData), req.body.password, function (err, user) {
+    User.register(new User(userData), req.body.password, function (err, user) {
         if (err) {
             console.log(err);
             return res.render('register');
@@ -118,57 +77,21 @@ app.post('/register', uploadRouter.upload.single("pic"), function (req, res) {
     });
 });
 
-app.get('/register', (req, res) => {
-    if (authenticattion.checkLogIn(req, res)) {
-        res.redirect('/user/' + req.session.passport.user);
-    } else {
-        res.render('register');
-    }
-
-});
-
-// //login
 app.get('/login', (req, res) => {
-    console.log(req.session);
-    console.log("55555");
     if (req.isAuthenticated()) {
-        let service = '/user/' + req.session.passport.user;
-        res.redirect('/user/' + req.session.passport.user);
+        res.send("LOGIN");
     } else {
         res.render('login');
     }
 });
 
-app.post('/login', authenticattionRouter.passport.authenticate('local', {
-    successRedirect: '/service',
-    failureRedirect: '/login'
+app.post('/login', authentication.passport.authenticate('local', {
+    successRedirect: '/login',
+    failureRedirect: '/register'
 }), (req, res) => {
 
 });
 
-app.get('/logout', (req, res) => {
-    req.logout();
-    res.redirect('service');
-});
-
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
-    next(createError(404));
-});
-
-// error handler
-app.use(function (err, req, res, next) {
-    // set locals, only providing error in development
-    res.locals.message = err.message;
-    res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-    // render the error page
-    res.status(err.status || 500);
-    res.render('error');
-});
-
-module.exports = app;
-
-app.listen(port, function () {
-    console.log("server started.......");
+app.listen(portNumber, () => {
+    console.log("START");
 });
