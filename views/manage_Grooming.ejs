@@ -1,0 +1,135 @@
+<% include partials/head %>
+<body>
+<% userdata %>
+<div id="wrapper">
+    <% include partials/navbar %>
+    <!-- PAGE TITLE START -->
+    <section id="title" class="container-fluid wow fadeInDown">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <h1>Manage Grooming</h1>
+                </div>
+                <div class="col-xs-6 text-right breadcrumbs">
+                    <ul class="list-inline list-unstyled">
+                        <li><a href="service">Home</a></li>
+                        <li>/</li>
+                        <li>Manage Grooming</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PAGE TITLE END -->
+
+    <section id="home-content">
+        <!-- CONTENT START -->
+        <div class="col-2 ">
+            <div class="container">
+
+            </div>
+        </div>
+        <div class="container padding35">
+            <div class="row ">
+                <% for(let i = 0; i < data.length ; i++){ %>
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="card w-100 storycard">
+                            <div class="card-body">
+                                <!--<h4 id="title" class="card-title">[<%= data[i].postType %>]</h4>-->
+                                <div class="row">
+                                    <div class="col-7" style="padding-left: 1em;">
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <label>ชื่อการจอง</label>
+                                            </div>
+                                            <div class="col-7">
+                                                <label id="identity"><%= data[i].grooming_wash_name %></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <label>รายละเอียดการจอง</label>
+                                            </div>
+                                            <div class="col-7">
+                                                <label id="species"><%= data[i].grooming_wash_remark %></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <label>วันที่จอง</label>
+                                            </div>
+                                            <div class="col-7">
+                                                <label id="petStatus"><%= data[i].grooming_wash_start_date.toDateString() %></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <label>ชื่อสุนุข</label>
+                                            </div>
+                                            <div class="col-7">
+                                                <label id="petStatus"><%= data[i].dog_id %></label>
+                                            </div>
+                                        </div>
+                                        <!--<div class="row">-->
+                                        <!--<div class="col-5">-->
+                                        <!--<label>ออกวันที่</label>-->
+                                        <!--</div>-->
+                                        <!--<div class="col-7">-->
+                                        <!--<label id="petStatus"><%= data[i].end_date %></label>-->
+                                        <!--</div>-->
+                                        <!--</div>-->
+                                        <!--<div class="row">-->
+                                        <!--<div class="col-5">-->
+                                        <!--<label>จะนวนวัน</label>-->
+                                        <!--</div>-->
+                                        <!--<div class="col-7">-->
+                                        <!--<label id="petStatus"><%= data[i].count_day %></label>-->
+                                        <!--</div>-->
+                                        <!--</div>-->
+                                        <!--<div class="row">-->
+                                        <!--<div class="col-12">-->
+                                        <!--<% let url = 'view/post_' + data[i]._id %>-->
+                                        <!--<a href=<%= url %> class="btn takeCareBTN">อ่านรายละเอียด</a>-->
+                                        <!--</div>-->
+                                        <!--</div>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </section>
+    <div id="intro" class="container-fluid bg-white padding300">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 text-left">
+                </div>
+
+                <div class="col-md-2 text-center">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTENT END -->
+    <% include partials/footer %>
+</div>
+
+
+<!-- MAIN JS FILES REQUIRED ON ALL PAGES -->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="/javascripts/screen.js"></script>
+
+<!-- Include jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include jQuery Validator plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+
+
+
+
+</body>

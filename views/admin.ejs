@@ -1,24 +1,50 @@
-<% include partials/head-backend %>
-<body class="skin-yellow-light sidebar-mini">
-<div class="wrapper">
-    <% include partials/navbaradmin %>
-    <div id="posContain" class="content-wrapper">
-        <section class="content">
-            <div class="row">
-                <div class="col-md-12">
-                    <form class="form-horizontal" id="form_data" name="form_data" method="post">
+<% include partials/head %>
+<body>
+<% userdata %>
+<div id="wrapper">
+    <% include partials/navbar %>
 
-                    </form>
+    <!-- PAGE TITLE START -->
+    <section id="title" class="container-fluid wow fadeInDown">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <h1>Pet Service</h1>
+                </div>
+                <div class="col-xs-6 text-right breadcrumbs">
+                    <ul class="list-inline list-unstyled">
+                        <li><a href="service">Home</a></li>
+                        <li>/</li>
+                        <li>Pet Service</li>
+                    </ul>
                 </div>
             </div>
-        </section>
-    </div>
-</div>
-<!-- ./wrapper -->
+        </div>
+    </section>
+    <!-- PAGE TITLE END -->
 
-<!--javascript-->
-<script src="partials/javascript.ejs"></script>
-<script>
-    $('#menu-index').addClass('active');
-</script>
+    <section id="home-content">
+        <!-- CONTENT START -->
+        <div class="container padding15">
+            <div id="userprofile">
+                <div class="container padding15" >
+                    <div class="row">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <% include partials/footer %>
+</div>
+<!-- CONTENT END -->
+
+<!-- MAIN JS FILES REQUIRED ON ALL PAGES -->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- EDURA JS REQUIRED ON ALL PAGES-->
+<script src="/javascripts/script.js"></script>
+
 </body>

@@ -1,0 +1,200 @@
+<% include partials/head %>
+<body>
+<% data %>
+
+<div id="wrapper">
+    <% include partials/navbar %>
+
+    <!-- PAGE TITLE START -->
+    <section id="title" class="container-fluid wow fadeInDown">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <h1>Pet Hotel</h1>
+                </div>
+                <div class="col-xs-6 text-right breadcrumbs">
+                    <ul class="list-inline list-unstyled">
+                        <li><a href="service">Home</a></li>
+                        <li>/</li>
+                        <li>Pet Hotel</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PAGE TITLE END -->
+
+    <section id="home-content">
+        <!-- CONTENT START -->
+        <div class="col-2 ">
+            <div class="container">
+
+            </div>
+        </div>
+        <div class="container paddind15">
+            <form class="form-group" method="post" id="form_data" name="form_data" action="/hotel/edit">
+                <div class="form-group padding35">
+                    <div class="row">
+                        <div align="left">
+                            <label class="col-sm-3 control-label">
+                                ชื่อการจอง :
+                            </label>
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="text" name="__daycare_name" id="__daycare_name"
+                                   class="form-control" value="<% data.daycare_name %>" onblur="trimValue(this)" placeholder="ชื่อการจอง"
+                                   required><br>
+                        </div>
+                        <i class="fa fa-asterisk text-red"></i>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div align="left">
+                                <label class="col-sm-3 control-label">
+                                    รายละเอียดการจอง :
+                                </label>
+                            </div>
+                            <div class="col-sm-5">
+                                    <textarea name="__daycare_remark" id="__daycare_remark" rows="4"
+                                              class="form-control" value="<% data.daycare_remark %>" onblur="trimValue(this)"></textarea><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div align="left">
+                                <label class="col-sm-3" for="daycare_type">รูปแบบรับฝาก</label>
+                            </div>
+                            <div class="col-sm-3">
+                                <select class="form-control" value="<% data.daycare_type %>" id="__daycare_type" name="__daycare_type">
+                                    <option value="ค้างคืน">ค้างคืน</option>
+                                    <option value="ไม่ค้างคืน">ไม่ค้างคืน</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div align="left">
+                                <label class="col-sm-3 control-label">
+                                    วันที่เริ่มฝาก :
+                                </label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="text" name="__start_date" id="__start_date"
+                                       class="form-control" value="<% data.start_date %>" required readonly>
+                            </div>
+                            <label class="col-sm-2 text-red">ให้บริการ 09:30 - 20:00 น.</label>
+                            <i class="fa fa-asterisk text-red"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div align="left">
+                                <label class="col-sm-3 control-label">
+                                    วันที่รับ :
+                                </label>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="div-use-service">
+                                    <input type="text" name="__end_date" id="__end_date"
+                                           class="form-control" value="<% data.end_date %>" required readonly><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group div-use-service">
+                            <div align="left">
+                                <label class="col-sm-3 control-label">
+                                    จำนวนวัน :
+                                </label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="text" name="__count_day" id="__count_day"
+                                       class="form-control" value="<% data.count_day %>" required><br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <div align="left">
+                                <label class="col-sm-3 control-label">
+                                    ชื่อสุนัข :
+                                </label>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="form-group">
+                                    <input type="text" name="__pet_name"
+                                           id="__pet_name" class="form-control"
+                                           onblur="trimValue(this);"
+                                           placeholder="ชื่อสุนัข" value="<% data.pet_name %>" required>
+                                </div>
+                            </div>
+                            <i class="fa fa-asterisk text-red"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div align="left">
+                                <label class="col-sm-3 control-label" for="__room_type">ประเภทห้อง</label>
+                            </div>
+                            <div class="col-sm-3">
+                                <select class="form-control" value="<% data.room_type %>" id="__room_type" name="__room_type">
+                                    <option value="ห้องเล็ก">ห้องเล็ก</option>
+                                    <option value="ห้องใหญ่">ห้องใหญ่</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div align="left">
+                                <label class="col-sm-3 control-label">
+                                </label>
+                            </div>
+                            <div class="col-sm-5">
+                                <button class="btn btn-success" type="submit">submit</button>
+                                <a class="btn btn-default" href="/service">ย้อนกลับ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <div id="intro" class="container-fluid bg-white padding35">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 text-left">
+                </div>
+
+                <div class="col-md-2 text-center">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTENT END -->
+    <% include partials/footer %>
+</div>
+
+
+<!-- MAIN JS FILES REQUIRED ON ALL PAGES -->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="/javascripts/screen.js"></script>
+<script>
+    $('#__start_date').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true
+    });
+    $('#__end_date').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true
+    });
+
+</script>
+</body>

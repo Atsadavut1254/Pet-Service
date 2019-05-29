@@ -1,0 +1,264 @@
+<% include partials/head %>
+<body>
+<% data %>
+
+<div id="wrapper">
+    <% include partials/navbar %>
+
+    <!-- PAGE TITLE START -->
+    <section id="title" class="container-fluid wow fadeInDown">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <h1>Grooming</h1>
+                </div>
+                <div class="col-xs-6 text-right breadcrumbs">
+                    <ul class="list-inline list-unstyled">
+                        <li><a href="service">Home</a></li>
+                        <li>/</li>
+                        <li>Grooming</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PAGE TITLE END -->
+
+    <section id="home-content">
+        <!-- CONTENT START -->
+        <div class="col-2 ">
+            <div class="container">
+
+            </div>
+        </div>
+        <div class="container paddind15">
+            <form class="form-group" method="post" id="form_data" name="form_data" action="/grooming/edit">
+                <div class="form-group padding35">
+                    <div class="row ">
+                        <div align="left">
+                            <label class="col-sm-3 control-label">
+                                ชื่อการจอง :
+                            </label>
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="test" class="form-control" name="__grooming_wash_name"
+                                   id="__grooming_wash_name" value="<% data.grooming_wash_name %>" placeholder="ชื่อการจอง" required>
+                        </div>
+                        <i class="fa fa-asterisk text-red"></i>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div align="left">
+                                <label class="col-sm-3 control-label">
+                                    วันที่จอง :
+                                </label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="text" name="__grooming_wash_start_date"
+                                       id="__grooming_wash_start_date" value="<% data.grooming_wash_start_date %>" class="form-control daterangepicker"
+                                       value="2019-05-29" placeholder="วันที่จอง" readonly
+                                       required>
+                            </div>
+                            <div class="form-group">
+                                <i class="fa fa-asterisk text-red"></i>
+                                <label class="form-control-static text-red">จองล่วงหน้าอย่างน้อย
+                                    2 วัน</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div align="left">
+                                <label class="col-sm-3 control-label">
+                                    ประเภทการจอง :
+                                </label>
+                            </div>
+                            <div class="col-sm-3">
+                                <select class="form-control" id="__grooming_type" value="<% data.grooming_type %>" name="__grooming_type">
+                                    <option value="อาบน้ำ">อาบน้ำ</option>
+                                    <option value="ตัดขน">ตัดขน</option>
+                                    <option value="ตัดขน">ตัดเล็บ</option>
+                                    <option value="ตัดขน">ทั้งหมด</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div align="left">
+                                <label class="col-sm-3 control-label">
+                                    รายละเอียดการจอง :
+                                </label>
+                            </div>
+                            <div class="col-sm-7">
+                        <textarea name="__grooming_wash_remark" id="__grooming_wash_remark"
+                                  class="form-control" value="<% data.grooming_wash_remark %>" rows="6"
+                                  placeholder="รายละเอียดการจอง"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div align="left">
+                                <label class="col-sm-3 control-label">
+                                </label>
+                            </div>
+                            <div class="col-sm-9">
+                                <label class="text-red">หมายเหตุ
+                                    เมื่อทำการจองคุณลูกค้าต้องเข้ามาถึงก่อนเวลาบริการ 30
+                                    นาที</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div align="left">
+                                <label class="col-sm-3 control-label">
+                                    ชื่อสุนัข :
+                                </label>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="form-group">
+                                    <input type="text" name="__pet_name"
+                                           id="__pet_name" class="form-control"
+                                           onblur="trimValue(this);"
+                                           placeholder="ชื่อสุนัข" value="<% data.pet_name %>" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <i class="fa fa-asterisk text-red"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div align="left">
+                                <label class="col-sm-3 control-label">
+                                    ช่วงเวลา :
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <select name="__select_hour" value="<% data.select_hour %>" id="__select_hour"
+                                        class="form-control">
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-2">
+                                <select name="__select_minute" value="<% data.select_minute %>" id="__select_minute"
+                                        class="form-control">
+                                    <option value="00">00</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option selected="" value="30">30</option>
+                                    <option value="31">31</option>
+                                    <option value="32">32</option>
+                                    <option value="33">33</option>
+                                    <option value="34">34</option>
+                                    <option value="35">35</option>
+                                    <option value="36">36</option>
+                                    <option value="37">37</option>
+                                    <option value="38">38</option>
+                                    <option value="39">39</option>
+                                    <option value="40">40</option>
+                                    <option value="41">41</option>
+                                    <option value="42">42</option>
+                                    <option value="43">43</option>
+                                    <option value="44">44</option>
+                                    <option value="45">45</option>
+                                    <option value="46">46</option>
+                                    <option value="47">47</option>
+                                    <option value="48">48</option>
+                                    <option value="49">49</option>
+                                    <option value="50">50</option>
+                                    <option value="51">51</option>
+                                    <option value="52">52</option>
+                                    <option value="53">53</option>
+                                    <option value="54">54</option>
+                                    <option value="55">55</option>
+                                    <option value="56">56</option>
+                                    <option value="57">57</option>
+                                    <option value="58">58</option>
+                                    <option value="59">59</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="text-red">ร้านเปิดให้บริการเวลา 09:30- 20:00
+                                    น.</label>
+                                <i class="fa fa-asterisk text-red"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div align="left">
+                                <label class="col-sm-3 control-label">
+                                </label>
+                            </div>
+                            <div class="col-sm-5">
+                                <button class="btn btn-success" type="submit">submit</button>
+                                <a class="btn btn-default" href="/service">ย้อนกลับ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <div id="intro" class="container-fluid bg-white padding15">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 text-left">
+                </div>
+
+                <div class="col-md-2 text-center">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTENT END -->
+    <% include partials/footer %>
+</div>
+<!-- MAIN JS FILES REQUIRED ON ALL PAGES -->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="/javascripts/screen.js"></script>
+</body>

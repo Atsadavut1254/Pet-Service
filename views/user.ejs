@@ -11,13 +11,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-6">
-                    <h1>User</h1>
+                    <h1>Profile</h1>
                 </div>
                 <div class="col-xs-6 text-right breadcrumbs">
                     <ul class="list-inline list-unstyled">
                         <li><a href="service">Home</a></li>
                         <li>/</li>
-                        <li>User</li>
+                        <li>Profile</li>
                     </ul>
                 </div>
             </div>
@@ -27,60 +27,62 @@
 
     <section id="home-content">
         <!-- CONTENT START -->
-        <div class="container padding15">
+        <div class="col-2 ">
+            <div class="container">
+
+            </div>
+        </div>
+        <div class="container ">
             <div id="userprofile">
-                <h1>ยินดีต้อนรับ <%= userdata.name %>&nbsp;<%= userdata.lname %> </h1>
-                <div class="container padding15" >
-                    <div class="row">
-                        <div class="col-sm-12 col-md-6 col-lg-6 padding15" style="text-align: center;">
-                            <% let picurl = '/image/user/' + userdata._id; %>
-                            <img id="profilePic" class="img-fluid" src="<%= picurl %>" style="width: 200px;height: 200px">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6 padding25" style="text-align: center;">
+                        <% let picurl = '/image/user/' + userdata._id; %>
+                        <img id="profilePic" class="img-responsive img-rounded card-custom" src="<%= picurl %>"
+                             style="width: 400px;height: 400px;">
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6 padding100">
+                        <div class="row">
+                            <div align="left">
+                                <label class="col-sm-4 control-label">ชื่อ-นามสกุล : </label>
+                            </div>
+                            <div class="col-sm-8">
+                                <label class="postDetailList">
+                                    <%= userdata.name %> <%= userdata.lname %>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="postDetailList">e-mail : </label>
+                            </div>
+                            <div class="col-sm-8">
+                                <label class="postDetailList"><%= userdata.username %></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="postDetailList">เพศ : </label>
+                            </div>
+                            <div class="col-sm-8">
+                                <label class="postDetailList"><%= userdata.gender %></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="postDetailList">สถานะ : </label>
+                            </div>
+                            <div class="col-sm-8">
+                                <label class="postDetailList"><%= userdata.status %></label>
+                            </div>
                         </div>
 
-                        <div class="col-sm-12 col-md-6 col-lg-6 padding15" >
-                            <div class="row">
-                                <div class="col-sm-2" align="left">
-                                    <label class="postDetailList">ชื่อ : </label>
+                        <div class="row">
+                            <div class="form-group padding35 text-center" style="margin-top: 1em;">
+                                <div class="col-12 btn-group">
+                                    <a href="<%= '/user/edit_' + userdata.username %>" class="btn btn-warning">แก้ไขข้อมูล</a>
+                                    <a href="/logout" class="btn btn-danger">ออกจากระบบ</a>
                                 </div>
-                                <div class="col-sm-5">
-                                    <label class="postDetailList">
-                                        <%= userdata.name %>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-2">
-                                    <label class="postDetailList">นามสกุล : </label>
-                                </div>
-                                <div class="col-sm-5">
-                                    <label class="postDetailList"><%= userdata.lname %></label>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-2">
-                                    <label class="postDetailList">e-mail : </label>
-                                </div>
-                                <div class="col-sm-5">
-                                    <label class="postDetailList"><%= userdata.username %></label>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <% let moreurl = '/user/detail_' + userdata.username; %>
-                                <div class="col-4 col-md-auto" style="text-align: center;">
-                                    <a href="<%= moreurl %>" class="btn btn-primary">ดูข้อมูลเพิ่มเติม</a>
-                                </div>
-                                <%= authen %>
-                                <% if(authen) { %>
-                                    <div class="col-4 col-md-auto" style="text-align: center;">
-                                        <a href="<%= '/view/user_post_' + userdata.username %>" class="btn btn-warning">ดูประวัติโพสต์</a>
-                                    </div>
-                                    <div class="col-4 col-md-auto" style="text-align: center;">
-                                        <a href="/signout" class="btn btn-danger">ออกจากระบบ</a>
-                                    </div>
-                                <% } %>
                             </div>
                         </div>
                     </div>
@@ -88,10 +90,22 @@
             </div>
         </div>
     </section>
+    <div id="intro" class="container-fluid bg-white padding100">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 text-left">
+                </div>
+
+                <div class="col-md-2 text-center">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTENT END -->
     <% include partials/footer %>
 </div>
 <!-- CONTENT END -->
-
 <!-- MAIN JS FILES REQUIRED ON ALL PAGES -->
 <script src="/vendor/jquery/jquery.min.js"></script>
 <script src="/vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>

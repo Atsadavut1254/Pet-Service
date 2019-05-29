@@ -1,0 +1,176 @@
+<% include partials/head %>
+<body>
+<% data %>
+
+<div id="wrapper">
+    <% include partials/navbar %>
+    <!-- PAGE TITLE START -->
+    <section id="title" class="container-fluid wow fadeInDown">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <h3>รายละเอียดการจองบริการ</h3>
+                </div>
+                <div class="col-xs-6 text-right breadcrumbs">
+                    <ul class="list-inline list-unstyled">
+                        <li><a href="service">Home</a></li>
+                        <li>/</li>
+                        <li>รายละเอียดการจองบริการ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PAGE TITLE END -->
+
+    <section id="home-content">
+        <!-- CONTENT START -->
+        <div class="col-2 ">
+            <div class="container">
+
+            </div>
+        </div>
+        <div class="container paddind15">
+            <form class="form-group" method="post" id="form_data" name="form_data" action="/grooming/new">
+                <div class="padding35">
+                    <% let c = 0;
+                    for(let i = 0; i < data.length; i++){
+                    if(data[i].owner === data._id){ %>
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="card-detail padding25">
+                                <div class="card-body" style="margin-left: 25px">
+                                    <div class="row ">
+                                        <div class="form-group">
+                                            <div align="left">
+                                                <label class="col-sm-3 col-md-4 control-label">
+                                                    ชื่อการจอง :
+                                                </label>
+                                            </div>
+                                            <div class="col-sm-5 col-md-6">
+                                                <label>
+                                                    <% data.grooming_wash_name %>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div align="left">
+                                                <label class="col-sm-3 col-md-4 control-label">
+                                                    ชื่อสุนัข :
+                                                </label>
+                                            </div>
+                                            <div class="col-sm-5 col-md-6">
+                                                <label>
+                                                    <% data.pet_name %>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div align="left">
+                                                <label class="col-sm-3 col-md-4 control-label">
+                                                    วันที่จอง :
+                                                </label>
+                                            </div>
+                                            <div class="col-sm-3 col-md-6">
+                                                <label>
+                                                    <% data.grooming_wash_start_date %>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div align="left">
+                                                <label class="col-sm-3 col-md-6 control-label">
+                                                    รายละเอียดการจอง :
+                                                </label>
+                                            </div>
+                                            <div class="col-sm-7 col-md-6">
+                                                <label>
+                                                    <% data.grooming_wash_remark %>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div align="left">
+                                                <label class="col-sm-3 col-md-4 control-label">
+                                                    ประเภทการจอง :
+                                                </label>
+                                            </div>
+                                            <div class="col-sm-6 col-md-6">
+                                                <label>
+                                                    <% data.grooming_type %>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div align="left">
+                                                <label class="col-sm-3 col-md-4 control-label">
+                                                    ช่วงเวลา :
+                                                </label>
+                                            </div>
+                                            <div class="col-sm-2 col-md-4">
+                                                <label>
+                                                    <% data.select_hour %>
+                                                </label>
+                                            </div>
+                                            <div class="col-sm-2 col-md-4">
+                                                <label>
+                                                    <% data.select_minute %>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div align="left">
+                                                <label class="col-sm-3 control-label">
+                                                </label>
+                                            </div>
+                                            <div class="col-sm-8" align="right">
+                                                <a href="<%= '/user/edit_' + userdata.username %>"
+                                                   class="btn btn-warning">แก้ไข</a>
+                                                <a href="/delete/grooming/<%= data._id %>" class="btn btn-danger">ลบโพสต์</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% c++; } } %>
+                </div>
+            </form>
+        </div>
+    </section>
+    <div id="intro" class="container-fluid bg-white padding300">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 text-left">
+                </div>
+
+                <div class="col-md-2 text-center">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTENT END -->
+    <% include partials/footer %>
+</div>
+
+
+<!-- MAIN JS FILES REQUIRED ON ALL PAGES -->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="/javascripts/screen.js"></script>
+
+
+</body>

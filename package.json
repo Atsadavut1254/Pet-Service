@@ -1,0 +1,37 @@
+{
+  "name": "pet-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "express-session": "^1.16.1",
+    "fs-extra": "^8.0.1",
+    "gridfs-stream": "^1.1.1",
+    "method-override": "^3.0.0",
+    "mongodb": "^3.2.6",
+    "mongoose": "^5.5.11",
+    "multer-gridfs-storage": "^3.2.3",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1",
+    "path": "^0.12.7",
+    "multer": "^1.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atsadavut1254/Pet-Service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Atsadavut1254/Pet-Service/issues"
+  },
+  "homepage": "https://github.com/Atsadavut1254/Pet-Service#readme"
+}

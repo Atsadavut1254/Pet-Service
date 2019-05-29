@@ -16,61 +16,73 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="/" class="toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+                        <a href="/" class="toggle" role="button" aria-haspopup="true" aria-expanded="false">HOME</a>
                     </li>
 
                     <li class="dropdown">
                         <a href="/service" class="toggle" role="button" aria-haspopup="true" aria-expanded="false">Find
-                            My house</a>
+                            My House
+                        </a>
                     </li>
 
                     <li class="dropdown">
                         <a href="/service" class="toggle" role="button" aria-haspopup="true" aria-expanded="false">Pet
                             Service</a>
                     </li>
+                    <% if( userdata === null) { %>
+                        <li class="dropdown">
+                            <a href="/register" class="toggle" role="button" aria-haspopup="true" aria-expanded="false">Register</a>
+                        </li>
 
-                    <li class="dropdown">
-                        <a href="/register" class="toggle" role="button" aria-haspopup="true" aria-expanded="false">Register</a>
-                    </li>
+                        <li class="dropdown">
+                            <a href="/login" class="toggle" role="button" aria-haspopup="true"
+                               aria-expanded="false">Login</a>
+                        </li>
+                    <% } else if( userdata.status === 'consumer' ) { %>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                               role="button" aria-haspopup="true" aria-expanded="false">Grooming</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/grooming">Reservations</a></li>
+                                <li><a href="/detail_grooming">List</a></li>
 
-                    <li class="dropdown">
-                        <a href="/login" class="toggle" role="button" aria-haspopup="true"
-                           aria-expanded="false">Login</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                           role="button" aria-haspopup="true" aria-expanded="false">Grooming</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/grooming">Reservations</a></li>
-                            <li><a href="/service">List</a></li>
+                            </ul>
+                        </li>
 
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                           role="button" aria-haspopup="true" aria-expanded="false">Pet Hotel</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/hotel">Reservations</a></li>
-                            <li><a href="/service">List</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="/login" class="toggle" role="button" aria-haspopup="true"
-                           aria-expanded="false">My Profile</a>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="/service" class="toggle" role="button" aria-haspopup="true"
-                           aria-expanded="false">My Dog</a>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="/logout" class="toggle" role="button" aria-haspopup="true"
-                           aria-expanded="false">Logout</a>
-                    </li>
-
-
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                               role="button" aria-haspopup="true" aria-expanded="false">Pet Hotel</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/hotel">Reservations</a></li>
+                                <li><a href="/detail_hotel">List</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/login" class="toggle" role="button" aria-haspopup="true"
+                               aria-expanded="false">My Profile</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/logout" class="toggle" role="button" aria-haspopup="true"
+                               aria-expanded="false">Logout</a>
+                        </li>
+                    <% } else{ %>
+                        <li class="dropdown">
+                            <a href="/user/<%= userdata.username%>" class="toggle" role="button" aria-haspopup="true"
+                               aria-expanded="false">My Profile</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/admin" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                               role="button" aria-haspopup="true" aria-expanded="false">manage system</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/manage_hotel/">manage hotel</a></li>
+                                <li><a href="/manage_Grooming">manage grooming</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/logout" class="toggle" role="button" aria-haspopup="true"
+                               aria-expanded="false">Logout</a>
+                        </li>
+                    <% } %>
 
                 </ul>
             </div><!--/.nav-collapse -->
