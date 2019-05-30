@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1d0d594-ffb6-447e-9ac2-098b6425e1b0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/models/edit_grooming_route.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/edit_grooming_route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/detail_grooming.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/detail_grooming.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/detail_hotel.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/detail_hotel.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/edit_groom.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/edit_groom.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/detail_grooming.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -87,20 +84,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/hotel.ejs">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/login.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="84" column="70" selection-start-line="84" selection-start-column="70" selection-end-line="84" selection-end-column="70" />
+            <state relative-caret-position="256">
+              <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/grooming.ejs">
+        <entry file="file://$PROJECT_DIR$/views/hotel.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="59" column="71" selection-start-line="59" selection-start-column="71" selection-end-line="59" selection-end-column="71" />
+            <state relative-caret-position="301">
+              <caret line="84" column="70" selection-start-line="84" selection-start-column="70" selection-end-line="84" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -165,7 +162,6 @@
         <option value="$PROJECT_DIR$/views/manage_user.ejs" />
         <option value="$PROJECT_DIR$/views/manage_hotel.ejs" />
         <option value="$PROJECT_DIR$/views/manage_Grooming.ejs" />
-        <option value="$PROJECT_DIR$/views/login.ejs" />
         <option value="$PROJECT_DIR$/public/javascripts/control.js" />
         <option value="$PROJECT_DIR$/models/image_route.js" />
         <option value="$PROJECT_DIR$/views/register.ejs" />
@@ -179,6 +175,7 @@
         <option value="$PROJECT_DIR$/views/edit_groom.ejs" />
         <option value="$PROJECT_DIR$/models/edit_grooming_route.js" />
         <option value="$PROJECT_DIR$/views/detail_grooming.ejs" />
+        <option value="$PROJECT_DIR$/views/login.ejs" />
       </list>
     </option>
   </component>
@@ -297,12 +294,12 @@
       <workItem from="1559150429148" duration="6179000" />
       <workItem from="1559157278119" duration="669000" />
       <workItem from="1559158018557" duration="14065000" />
-      <workItem from="1559179975650" duration="11180000" />
+      <workItem from="1559179975650" duration="11319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64360000" />
+    <option name="totallyTimeSpent" value="64499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -531,13 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/login.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="57" column="56" lean-forward="true" selection-start-line="57" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -676,6 +666,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="78" column="103" selection-start-line="78" selection-start-column="103" selection-end-line="78" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/login.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
         </state>
       </provider>
     </entry>
