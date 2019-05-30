@@ -2,36 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1d0d594-ffb6-447e-9ac2-098b6425e1b0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/edit_grooming_route.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/edit_grooming_route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/edit_hotel_route.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/edit_hotel_route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/grooming_route.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/grooming_route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/hotel_route.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/hotel_route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/hotel_schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/hotel_schema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/image_route.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/image_route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/user_route.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user_route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascripts/control.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/control.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/jquery/jquery-3.0.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/jquery/jquery.easing.1.3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/jquery/jquery.filterizr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/jquery/jquery.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/views/detail_grooming.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/detail_grooming.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/detail_hotel.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/detail_hotel.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/edit_groom.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/edit_groom.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/edit_hotel.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/edit_hotel.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/grooming.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/grooming.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/hotel.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/hotel.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/manage_Grooming.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/manage_Grooming.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/manage_hotel.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/manage_hotel.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/manage_user.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/manage_user.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/head.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/head.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/navbar.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/navbar.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/register.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/register.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/service.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/service.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/user.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/user_edit_profile.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user_edit_profile.ejs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,15 +16,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/user_edit_profile.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="73" column="120" selection-start-line="73" selection-start-column="43" selection-end-line="73" selection-end-column="120" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/partials/navbar.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="199">
@@ -60,15 +25,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/user_route.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="185">
@@ -78,28 +34,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/register.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="187" column="3" selection-start-line="187" selection-start-column="3" selection-end-line="218" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/detail_hotel.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="60" column="73" selection-start-line="60" selection-start-column="73" selection-end-line="60" selection-end-column="73" />
+            <state relative-caret-position="306">
+              <caret line="145" column="82" selection-start-line="145" selection-start-column="65" selection-end-line="145" selection-end-column="82" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/detail_grooming.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="78" column="103" selection-start-line="78" selection-start-column="103" selection-end-line="78" selection-end-column="103" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/detail_grooming.ejs">
+        <entry file="file://$PROJECT_DIR$/views/edit_groom.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="78" column="103" selection-start-line="78" selection-start-column="103" selection-end-line="78" selection-end-column="103" />
+            <state relative-caret-position="471">
+              <caret line="266" column="34" selection-start-line="266" selection-start-column="34" selection-end-line="266" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/detail_grooming_route.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/edit_grooming_route.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="32" column="71" lean-forward="true" selection-start-line="32" selection-start-column="71" selection-end-line="32" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/grooming_schema.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -170,7 +153,6 @@
         <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/views/admin.ejs" />
         <option value="$PROJECT_DIR$/views/partials/footer.ejs" />
-        <option value="$PROJECT_DIR$/models/edit_grooming_route.js" />
         <option value="$PROJECT_DIR$/models/grooming_route.js" />
         <option value="$PROJECT_DIR$/models/detail_hotel_route.js" />
         <option value="$PROJECT_DIR$/models/edit_hotel_route.js" />
@@ -178,7 +160,6 @@
         <option value="$PROJECT_DIR$/models/hotel_route.js" />
         <option value="$PROJECT_DIR$/views/partials/head.ejs" />
         <option value="$PROJECT_DIR$/views/edit_hotel.ejs" />
-        <option value="$PROJECT_DIR$/views/edit_groom.ejs" />
         <option value="$PROJECT_DIR$/views/user.ejs" />
         <option value="$PROJECT_DIR$/views/service.ejs" />
         <option value="$PROJECT_DIR$/views/manage_user.ejs" />
@@ -192,10 +173,12 @@
         <option value="$PROJECT_DIR$/models/user_route.js" />
         <option value="$PROJECT_DIR$/views/grooming.ejs" />
         <option value="$PROJECT_DIR$/views/hotel.ejs" />
-        <option value="$PROJECT_DIR$/views/detail_grooming.ejs" />
-        <option value="$PROJECT_DIR$/views/detail_hotel.ejs" />
         <option value="$PROJECT_DIR$/views/partials/navbar.ejs" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/views/detail_hotel.ejs" />
+        <option value="$PROJECT_DIR$/views/edit_groom.ejs" />
+        <option value="$PROJECT_DIR$/models/edit_grooming_route.js" />
+        <option value="$PROJECT_DIR$/views/detail_grooming.ejs" />
       </list>
     </option>
   </component>
@@ -314,12 +297,12 @@
       <workItem from="1559150429148" duration="6179000" />
       <workItem from="1559157278119" duration="669000" />
       <workItem from="1559158018557" duration="14065000" />
-      <workItem from="1559179975650" duration="8610000" />
+      <workItem from="1559179975650" duration="11180000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61790000" />
+    <option name="totallyTimeSpent" value="64360000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -396,13 +379,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/userSchema.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -485,13 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/grooming_schema.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/detail_hotel_route.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -499,24 +468,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/detail_grooming_route.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/hotel_schema.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/edit_grooming_route.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -609,13 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/edit_groom.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="259" column="56" lean-forward="true" selection-start-line="259" selection-end-line="260" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/user.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="896">
@@ -668,20 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/detail_grooming.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="78" column="103" selection-start-line="78" selection-start-column="103" selection-end-line="78" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/detail_hotel.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="60" column="73" selection-start-line="60" selection-start-column="73" selection-end-line="60" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/partials/navbar.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -693,6 +627,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="60" column="26" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/detail_hotel.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="145" column="82" selection-start-line="145" selection-start-column="65" selection-end-line="145" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/userSchema.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/grooming_schema.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/edit_groom.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="266" column="34" selection-start-line="266" selection-start-column="34" selection-end-line="266" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/edit_grooming_route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="32" column="71" lean-forward="true" selection-start-line="32" selection-start-column="71" selection-end-line="32" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/detail_grooming_route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/detail_grooming.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="78" column="103" selection-start-line="78" selection-start-column="103" selection-end-line="78" selection-end-column="103" />
         </state>
       </provider>
     </entry>

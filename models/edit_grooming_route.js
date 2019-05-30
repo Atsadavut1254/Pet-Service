@@ -30,7 +30,7 @@ router.post('/:id', authenticate.isLoggedIn,function(req, res, path) {
     let data = {
         grooming_wash_name : req.body.__grooming_wash_name,
         grooming_wash_remark : req.body.__grooming_wash_remark,
-        grooming_wash_start_date : req.body.grooming_wash_start_date,
+        grooming_wash_start_date : req.body.__grooming_wash_start_date,
         grooming_type : req.body.__grooming_type,
         pet_name : req.body.__pet_name,
         select_hour : req.body.__select_hour,

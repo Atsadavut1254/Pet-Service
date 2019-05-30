@@ -54,9 +54,9 @@
                                 </label>
                             </div>
                             <div class="col-sm-3">
-                                <input type="text" name="__grooming_wash_start_date"
-                                       id="datepicker" value="<%= data.grooming_wash_start_date %>" class="form-control daterangepicker"
-                                       value="2019-05-29" placeholder="วันที่จอง" readonly
+                                <input type="date" name="__grooming_wash_start_date"
+                                       id="datepicker" value="<%= data.grooming_wash_start_date %>" class="form-control"
+                                        placeholder="วันที่จอง"
                                        required>
                             </div>
                             <div class="form-group">
@@ -263,7 +263,9 @@
 <script src="/javascripts/screen.js"></script>
 <script>
     $( function() {
-        $( "#datepicker" ).datepicker();
+        $( "#datepicker" ).datepicker({
+            dateFormat: 'yy-mm-dd'
+        });
     } );
 </script>
 </body>
