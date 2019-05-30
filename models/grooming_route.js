@@ -40,4 +40,16 @@ router.post('/new',(req,res)=>{
     res.redirect('/detail_grooming');
 });
 
+router.get('/delete/:id',(req,res)=>{
+    let id = req.params.id;
+
+    grooming.findByIdAndDelete(id,(err,del)=>{
+        if(err){
+            console.log(err);
+
+        }
+        res.redirect('/detail_grooming');
+    })
+})
+
 module.exports = router;

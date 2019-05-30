@@ -33,7 +33,7 @@
         </div>
         <div class="container padding15">
             <div id="signup">
-                <form method="POST" action="/user/edit" enctype="multipart/form-data">
+                <form method="POST" action="/user/edit">
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-lg-2">
                             <div class="form-group">
@@ -71,7 +71,7 @@
                                         <% let picurl = '/image/user/'+userdata._id; %>
                                         <div class="card-custom" style="width: 200px;height: 200px; text-align: center;">
                                             <img id="img-upload" src=<%= picurl %> style="width: 200px ;height: 200px;">
-                                            <!--<input type="file" id="picture" name="picture" onchange="previewFile()"><br>-->
+                                            <input type="file" id="picture" name="picture" onchange="previewFile()"><br>
                                         </div>
                                     </div>
                                 </div>
@@ -177,11 +177,45 @@
 <!-- CONTENT END -->
 
 <!-- MAIN JS FILES REQUIRED ON ALL PAGES -->
-<script src="/vendor/jquery/jquery.min.js"></script>
+<!--<script src="/vendor/jquery/jquery.min.js"></script>-->
 <script src="/vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
 <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- EDURA JS REQUIRED ON ALL PAGES-->
 <script src="/javascripts/script.js"></script>
+<script>
+    function previewFile() {
+        var preview = document.querySelector('img'); //selects the query named img
+        var file = document.querySelector('input[type=file]').files[0]; //sames as here
+        var reader = new FileReader();
+
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        if (file) {
+            reader.readAsDataURL(file); //reads the data as a URL
+        } else {
+            preview.src = "";
+        }
+    }
+
+    // previewFile();  //calls the function named previewFile()
+
+    function chkThai(e) {
+        var keyCode = getKeyCode(e);
+        if (((keyCode <= 90) && (keyCode >= 65)) || ((keyCode <= 122) && (keyCode >= 97))) {
+            cancelEvents(e);
+        }
+    }
+
+    function chkInteger(e) {
+        var keyCode = getKeyCode(e);
+        if ((keyCode < 48) || (keyCode > 57)) {
+            cancelEvents(e);
+        }
+    }
+
+</script>
 
 </body>

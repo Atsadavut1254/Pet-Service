@@ -62,8 +62,9 @@
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6">
                             <div class="form-group">
+                                <img name="image" id="image" src='images/user2-160x160.jpg' height="200" alt="">
                                 <input type="file" id="picture" name="picture" onchange="previewFile()"><br>
-                                <img onerror="src='/images/user2-160x160.jpg'" height="200" alt="">
+
                             </div>
                         </div>
                     </div>
@@ -79,7 +80,7 @@
                             <div class="form-group">
                                 <label for="address">บ้านเลขที่</label>
                                 <input id="address" name="address" class="form-control" onblur="trimValue(this)"
-                                       type="text" required>
+                                       type="text" >
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-5">
@@ -104,21 +105,21 @@
                             <div class="form-group">
                                 <label for="subdistrict">ตำบล/แขวง</label>
                                 <input id="subdistrict" name="subdistrict" type="text" onblur="trimValue(this)"
-                                       onkeypress="chkThai(event)" class="form-control" required>
+                                       onkeypress="chkThai(event)" class="form-control" >
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-5">
                             <div class="form-group">
                                 <label for="district">อำเภอ/เขต</label>
                                 <input id="district" name="district" type="text" onblur="trimValue(this)"
-                                       onkeypress="chkThai(event)" class="form-control" required>
+                                       onkeypress="chkThai(event)" class="form-control" >
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-5">
                             <div class="form-group">
                                 <label for="province">จังหวัด</label>
                                 <input id="province" name="province" type="text" onblur="trimValue(this)"
-                                       onkeypress="chkThai(event)" class="form-control" required>
+                                       onkeypress="chkThai(event)" class="form-control" >
                             </div>
                         </div>
                     </div>
@@ -129,14 +130,14 @@
                             <div class="form-group">
                                 <label for="zipcode">รหัสไปรษณีย์</label>
                                 <input id="zipcode" name="zipcode" type="text" onblur="trimValue(this)"
-                                       onkeypress="chkInteger(event)" class="form-control" required>
+                                       onkeypress="chkInteger(event)" class="form-control" >
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-5">
                             <div class="form-group">
                                 <label for="phone">เบอร์โทรศัพท์</label>
                                 <input id="phone" name="phone" type="text" onblur="trimValue(this)"
-                                       onkeypress="chkInteger(event)" maxlength="10" class="form-control" required>
+                                       onkeypress="chkInteger(event)" maxlength="10" class="form-control" >
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-5">
@@ -177,7 +178,7 @@
 
 
 <!-- MAIN JS FILES REQUIRED ON ALL PAGES -->
-<script src="/vendor/jquery/jquery.min.js"></script>
+<!--<script src="/vendor/jquery/jquery.min.js"></script>-->
 <script src="/vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
 <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 <!-- EDURA JS REQUIRED ON ALL PAGES-->
@@ -200,7 +201,7 @@
         }
     }
 
-    previewFile();  //calls the function named previewFile()
+    // previewFile();  //calls the function named previewFile()
 
     function chkThai(e) {
         var keyCode = getKeyCode(e);

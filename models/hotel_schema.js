@@ -9,10 +9,7 @@ const hotelSchema = new mongoose.Schema({
     pet_name : String,
     room_type : String,
     end_date : String,
-    end_hour : String,
-    end_minute : String,
     count_day : String,
-    is_use_service : String,
 });
 
 // UserSchema.plugin(passportLocalMongoose);

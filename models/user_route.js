@@ -6,7 +6,6 @@ const router = express.Router();
 let User = require('./userSchema');
 let authentication = require('./authentication_module');
 let uploadpic = require('./upload');
-// let post = require('./post_schema');
 
 router.use(express.static(path.resolve('./public')));
 express().use(BodyParser.urlencoded({extended: true}));
@@ -31,7 +30,7 @@ router.get('/edit_:id', authentication.isLoggedIn, (req,res)=>{
 });
 
 
-router.post('/edit',uploadpic.upload.single('picture'), (req,res)=>{
+router.post('/edit', (req,res)=>{
     let sessionname = req.session;
     let imgfile = uploadpic.uploadIMG(req,res);
 
@@ -48,7 +47,7 @@ router.post('/edit',uploadpic.upload.single('picture'), (req,res)=>{
         province: req.body.province,
         zipcode: req.body.zipcode,
         phone: req.body.phone,
-        // pic: imgfile,
+        pic: imgfile,
         // status: req.body.status
         // password : req.body.password
     };

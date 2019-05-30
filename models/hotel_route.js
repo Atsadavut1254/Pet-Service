@@ -39,4 +39,17 @@ router.post('/new',(req,res)=>{
 });
 
 
+router.get('/delete/:id',(req,res)=>{
+    let id = req.params.id;
+
+    hotel.findByIdAndDelete(id,(err,del)=>{
+        if(err){
+            console.log(err);
+
+        }
+        res.redirect('/detail_hotel');
+    })
+})
+
+
 module.exports = router;

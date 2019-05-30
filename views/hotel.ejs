@@ -82,7 +82,7 @@
                             </div>
                             <div class="col-sm-3">
                                 <input type="text" name="__start_date" id="__start_date"
-                                       class="form-control" value="2019-05-29" required readonly>
+                                       class="form-control"  required >
                             </div>
                             <label class="col-sm-2 text-red">ให้บริการ 09:30 - 20:00 น.</label>
                             <i class="fa fa-asterisk text-red"></i>
@@ -98,7 +98,7 @@
                             <div class="col-sm-3">
                                 <div class="div-use-service">
                                     <input type="text" name="__end_date" id="__end_date"
-                                           class="form-control" value="2019-05-29" required readonly><br>
+                                           class="form-control"  required ><br>
                                 </div>
                             </div>
                         </div>
@@ -182,19 +182,17 @@
 
 
 <!-- MAIN JS FILES REQUIRED ON ALL PAGES -->
-<script src="/vendor/jquery/jquery.min.js"></script>
+<!--<script src="/vendor/jquery/jquery.min.js"></script>-->
 <script src="/vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
 <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="/javascripts/screen.js"></script>
 <script>
-    $('#__start_date').datepicker({
-        format: 'yyyy-mm-dd',
-        autoclose: true
-    });
-    $('#__end_date').datepicker({
-        format: 'yyyy-mm-dd',
-        autoclose: true
-    });
+    $( function() {
+        $( "#__start_date" ).datepicker();
+    } );
+    $( function() {
+        $( "#__end_date" ).datepicker();
+    } );
 
 </script>
 </body>

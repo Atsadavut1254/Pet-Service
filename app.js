@@ -38,6 +38,8 @@ let detail_grooming_route = require('./models/detail_grooming_route');
 let manage_user_route = require('./models/manage_user_route');
 let manage_grooming_route = require('./models/manage_Grooming_route');
 let manage_hotel_route = require('./models/manage_hotel_route');
+let edit_groom = require('./models/edit_grooming_route');
+let edit_hotel = require('./models/edit_hotel_route');
 
 
 
@@ -51,10 +53,12 @@ app.use('/detail_grooming', detail_grooming_route);
 app.use('/manage_user', manage_user_route);
 app.use('/manage_Grooming', manage_grooming_route);
 app.use('/manage_hotel', manage_hotel_route);
+app.use('/editgroom', edit_groom);
+app.use('/edithotel', edit_hotel);
 
 
 app.get('/', (req, res) => {
-    res.render('index');
+    res.redirect('/service');
 });
 
 
@@ -84,7 +88,7 @@ app.get('/register', (req, res) => {
     }
 });
 
-app.post('/register', uploadpic.upload.single("pic"), function (req, res) {
+app.post('/register', uploadpic.upload.single("picture"), function (req, res) {
     let imgfile = uploadpic.uploadIMG(req, res);
     let userData = {
         username: req.body.username,
@@ -103,6 +107,7 @@ app.post('/register', uploadpic.upload.single("pic"), function (req, res) {
         status: req.body.status
 
     };
+    console.log(userData);
     User.register(new User(userData), req.body.password, function (err, user) {
         if (err) {
             console.log(err);

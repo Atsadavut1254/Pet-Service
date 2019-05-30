@@ -20,21 +20,8 @@ const collectionname = 'images';
 MongoClient.connect(myurl, (err, client) => {
     if (err) return console.log(err)
     db = client.db(dbname);
-})
+});
 
-// router.get('/:id', (req, res) => {
-//   let filename = req.params.id;
-
-//   db.collection('collectionname').findOne({ '_id': ObjectId(filename) }, (err, result) => {
-
-//     if (err) return console.log(err)
-
-//     res.contentType('image/jpeg');
-//     res.send(result.image.buffer);
-
-
-//   })
-// })
 
 router.get('/user/:id', (req, res) => {
     let name = req.params.id;
@@ -49,41 +36,6 @@ router.get('/user/:id', (req, res) => {
     });
 });
 
-router.get('/post/:id', (req, res) => {
-    let name = req.params.id;
 
-
-    db.collection('posts').findOne({ '_id': ObjectId(name) }, (err, result) => {
-        if (err) return console.log(err)
-
-        // console.log(result);
-        res.contentType('image/jpeg');
-        res.send(result.pic.image.buffer);
-    });
-});
-
-router.get('/foundation/:id', (req, res) => {
-    let id = req.params.id;
-
-    db.collection('foundations').findOne({ '_id': ObjectId(id) }, (err, result) => {
-        if (err) return console.log(err)
-
-        // console.log(result);
-        res.contentType('image/jpeg');
-        res.send(result.pic.image.buffer);
-    });
-});
-
-router.get('/howto/:id', (req, res) => {
-    let id = req.params.id;
-
-    db.collection('howtos').findOne({ '_id': ObjectId(id) }, (err, result) => {
-        if (err) return console.log(err)
-
-        // console.log(result);
-        res.contentType('image/jpeg');
-        res.send(result.pic.image.buffer);
-    });
-});
 
 module.exports = router;

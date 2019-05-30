@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="container paddind15">
-            <form class="form-group" method="post" id="form_data" name="form_data" action="/grooming/edit">
+            <form class="form-group" method="post" id="form_data" name="form_data" action="/editgroom/<%= data._id %>">
                 <div class="form-group padding35">
                     <div class="row ">
                         <div align="left">
@@ -42,7 +42,7 @@
                         </div>
                         <div class="col-sm-5">
                             <input type="test" class="form-control" name="__grooming_wash_name"
-                                   id="__grooming_wash_name" value="<% data.grooming_wash_name %>" placeholder="ชื่อการจอง" required>
+                                   id="__grooming_wash_name" value="<%= data.grooming_wash_name %>" placeholder="ชื่อการจอง" required>
                         </div>
                         <i class="fa fa-asterisk text-red"></i>
                     </div>
@@ -55,7 +55,7 @@
                             </div>
                             <div class="col-sm-3">
                                 <input type="text" name="__grooming_wash_start_date"
-                                       id="__grooming_wash_start_date" value="<% data.grooming_wash_start_date %>" class="form-control daterangepicker"
+                                       id="datepicker" value="<%= data.grooming_wash_start_date %>" class="form-control daterangepicker"
                                        value="2019-05-29" placeholder="วันที่จอง" readonly
                                        required>
                             </div>
@@ -74,7 +74,7 @@
                                 </label>
                             </div>
                             <div class="col-sm-3">
-                                <select class="form-control" id="__grooming_type" value="<% data.grooming_type %>" name="__grooming_type">
+                                <select class="form-control" id="__grooming_type" value="<%= data.grooming_type %>" name="__grooming_type">
                                     <option value="อาบน้ำ">อาบน้ำ</option>
                                     <option value="ตัดขน">ตัดขน</option>
                                     <option value="ตัดขน">ตัดเล็บ</option>
@@ -92,7 +92,7 @@
                             </div>
                             <div class="col-sm-7">
                         <textarea name="__grooming_wash_remark" id="__grooming_wash_remark"
-                                  class="form-control" value="<% data.grooming_wash_remark %>" rows="6"
+                                  class="form-control" value="<%= data.grooming_wash_remark %>" rows="6"
                                   placeholder="รายละเอียดการจอง"></textarea>
                             </div>
                         </div>
@@ -122,7 +122,7 @@
                                     <input type="text" name="__pet_name"
                                            id="__pet_name" class="form-control"
                                            onblur="trimValue(this);"
-                                           placeholder="ชื่อสุนัข" value="<% data.pet_name %>" required>
+                                           placeholder="ชื่อสุนัข" value="<%= data.pet_name %>" required>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -138,7 +138,7 @@
                                 </label>
                             </div>
                             <div class="col-sm-2">
-                                <select name="__select_hour" value="<% data.select_hour %>" id="__select_hour"
+                                <select name="__select_hour" value="<%= data.select_hour %>" id="__select_hour"
                                         class="form-control">
                                     <option value="09">09</option>
                                     <option value="10">10</option>
@@ -154,7 +154,7 @@
                                 </select>
                             </div>
                             <div class="col-sm-2">
-                                <select name="__select_minute" value="<% data.select_minute %>" id="__select_minute"
+                                <select name="__select_minute" value="<%= data.select_minute %>" id="__select_minute"
                                         class="form-control">
                                     <option value="00">00</option>
                                     <option value="01">01</option>
@@ -233,7 +233,7 @@
                             </div>
                             <div class="col-sm-5">
                                 <button class="btn btn-success" type="submit">submit</button>
-                                <a class="btn btn-default" href="/service">ย้อนกลับ</a>
+                                <a class="btn btn-default" href="/detail_groom">ย้อนกลับ</a>
                             </div>
                         </div>
                     </div>
@@ -257,8 +257,13 @@
     <% include partials/footer %>
 </div>
 <!-- MAIN JS FILES REQUIRED ON ALL PAGES -->
-<script src="/vendor/jquery/jquery.min.js"></script>
+<!--<script src="/vendor/jquery/jquery.min.js"></script>-->
 <script src="/vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
 <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="/javascripts/screen.js"></script>
+<script>
+    $( function() {
+        $( "#datepicker" ).datepicker();
+    } );
+</script>
 </body>
