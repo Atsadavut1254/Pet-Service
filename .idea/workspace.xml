@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c1d0d594-ffb6-447e-9ac2-098b6425e1b0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
-    </list>
+    <list default="true" id="c1d0d594-ffb6-447e-9ac2-098b6425e1b0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,16 +292,15 @@
       <workItem from="1559150429148" duration="6179000" />
       <workItem from="1559157278119" duration="669000" />
       <workItem from="1559158018557" duration="14065000" />
-      <workItem from="1559179975650" duration="11319000" />
+      <workItem from="1559179975650" duration="11919000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64499000" />
+    <option name="totallyTimeSpent" value="65099000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26510066" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
