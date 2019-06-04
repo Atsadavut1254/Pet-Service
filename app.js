@@ -35,9 +35,9 @@ let hotel_route = require('./models/hotel_route');
 let admin_route = require('./models/admin_route');
 let detail_hotel_route = require('./models/detail_hotel_route');
 let detail_grooming_route = require('./models/detail_grooming_route');
-let manage_user_route = require('./models/manage_user_route');
-let manage_grooming_route = require('./models/manage_Grooming_route');
-let manage_hotel_route = require('./models/manage_hotel_route');
+// let manage_user_route = require('./models/manage_user_route');
+// let manage_grooming_route = require('./models/manage_Grooming_route');
+// let manage_hotel_route = require('./models/manage_hotel_route');
 let edit_groom = require('./models/edit_grooming_route');
 let edit_hotel = require('./models/edit_hotel_route');
 
@@ -50,9 +50,9 @@ app.use('/hotel', hotel_route);
 app.use('/admin', admin_route);
 app.use('/detail_hotel', detail_hotel_route);
 app.use('/detail_grooming', detail_grooming_route);
-app.use('/manage_user', manage_user_route);
-app.use('/manage_Grooming', manage_grooming_route);
-app.use('/manage_hotel', manage_hotel_route);
+// app.use('/manage_user', manage_user_route);
+// app.use('/manage_Grooming', manage_grooming_route);
+// app.use('/manage_hotel', manage_hotel_route);
 app.use('/editgroom', edit_groom);
 app.use('/edithotel', edit_hotel);
 
